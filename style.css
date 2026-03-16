@@ -1,4 +1,18 @@
-/* Reset default browser spacing */
+/* ---------- COLOR SYSTEM (60-30-10 RULE) ---------- */
+
+:root {
+--color-60: #f5f7fa;      /* background */
+--color-30: #2c3e50;      /* main UI */
+--color-10: #3498db;      /* accent */
+
+```
+--card-color: #ffffff;
+--text-color: #333;
+```
+
+}
+
+/* ---------- GLOBAL SETTINGS ---------- */
 
 * {
   margin: 0;
@@ -6,69 +20,160 @@
   box-sizing: border-box;
   }
 
-/* Body styling */
+html {
+scroll-behavior: smooth;
+}
+
 body {
-font-family: Arial, sans-serif;
-background-color: #f4f6f8;
-color: #333;
+font-family: "Segoe UI", sans-serif;
+background: var(--color-60);
+color: var(--text-color);
 line-height: 1.6;
 }
 
-/* Navigation bar */
+/* ---------- NAVIGATION BAR ---------- */
+
 nav {
+position: sticky;
+top: 0;
+z-index: 1000;
+
+```
 display: flex;
 justify-content: space-between;
 align-items: center;
-background: #111;
+
+background: var(--color-30);
 color: white;
 padding: 15px 40px;
+```
+
+}
+
+nav h1 {
+font-size: 20px;
 }
 
 nav ul {
 list-style: none;
 display: flex;
-gap: 20px;
-}
-
-nav a {
-color: white;
-text-decoration: none;
-}
-
-/* Section layout */
-section {
-padding: 60px 10%;
-}
-
-/* Titles */
-h2 {
-margin-bottom: 20px;
-}
-
-/* Portfolio grid */
-#portfolio {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 gap: 25px;
 }
 
-/* Portfolio cards */
-#portfolio div {
-background: white;
-padding: 15px;
-border-radius: 10px;
-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-text-align: center;
+nav a {
+text-decoration: none;
+color: white;
+font-weight: 500;
+transition: color 0.3s;
 }
 
-/* Images */
+nav a:hover {
+color: var(--color-10);
+}
+
+/* ---------- HERO / HEADER SECTION ---------- */
+
+#home {
+text-align: center;
+padding: 100px 10%;
+}
+
+#home h2 {
+font-size: 40px;
+margin-bottom: 15px;
+color: var(--color-30);
+}
+
+#home p {
+font-size: 18px;
+}
+
+/* ---------- GENERAL SECTIONS ---------- */
+
+section {
+padding: 70px 10%;
+}
+
+h2 {
+margin-bottom: 25px;
+color: var(--color-30);
+}
+
+/* ---------- PORTFOLIO GRID ---------- */
+
+#portfolio {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px;
+}
+
+/* ---------- PORTFOLIO CARDS ---------- */
+
+#portfolio div {
+background: var(--card-color);
+padding: 20px;
+border-radius: 12px;
+
+```
+box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+
+transition: transform 0.3s ease;
+```
+
+}
+
+#portfolio div:hover {
+transform: translateY(-8px);
+}
+
+/* ---------- IMAGE ZOOM EFFECT ---------- */
+
 #portfolio img {
 width: 100%;
 border-radius: 8px;
+margin-bottom: 10px;
+
+```
+transition: transform 0.3s ease;
+```
+
 }
 
-/* Hover effect */
-#portfolio div:hover {
-transform: translateY(-5px);
-transition: 0.3s;
+#portfolio img:hover {
+transform: scale(1.05);
+}
+
+/* ---------- BLOG SECTION ---------- */
+
+#blog article {
+background: var(--card-color);
+padding: 20px;
+margin-bottom: 20px;
+
+```
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+```
+
+}
+
+/* ---------- CONTACT SECTION ---------- */
+
+#contact {
+text-align: center;
+}
+
+/* ---------- BUTTON STYLE (OPTIONAL) ---------- */
+
+button {
+background: var(--color-10);
+border: none;
+color: white;
+padding: 10px 18px;
+border-radius: 6px;
+cursor: pointer;
+}
+
+button:hover {
+opacity: 0.9;
 }
