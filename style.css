@@ -1,0 +1,74 @@
+/* Reset default browser spacing */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+/* Body styling */
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f6f8;
+color: #333;
+line-height: 1.6;
+}
+
+/* Navigation bar */
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: #111;
+color: white;
+padding: 15px 40px;
+}
+
+nav ul {
+list-style: none;
+display: flex;
+gap: 20px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+}
+
+/* Section layout */
+section {
+padding: 60px 10%;
+}
+
+/* Titles */
+h2 {
+margin-bottom: 20px;
+}
+
+/* Portfolio grid */
+#portfolio {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 25px;
+}
+
+/* Portfolio cards */
+#portfolio div {
+background: white;
+padding: 15px;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+text-align: center;
+}
+
+/* Images */
+#portfolio img {
+width: 100%;
+border-radius: 8px;
+}
+
+/* Hover effect */
+#portfolio div:hover {
+transform: translateY(-5px);
+transition: 0.3s;
+}
