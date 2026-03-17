@@ -25,11 +25,12 @@ scroll-behavior: smooth;
 }
 
 body {
-font-family: "Segoe UI", sans-serif;
+font-family: 'Open Sans', sans-serif;
 background: var(--color-60);
 color: var(--text-color);
 line-height: 1.6;
 }
+
 
 /* ---------- NAVIGATION BAR ---------- */
 
