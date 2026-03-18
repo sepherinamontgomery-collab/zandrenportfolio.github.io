@@ -1,9 +1,9 @@
-/* ---------- COLOR SYSTEM (60-30-10 RULE) ---------- */
+/* ---------- COLOR SYSTEM (60-30-10) ---------- */
 
 :root {
---color-60: #f5f7fa;   /* background */
---color-30: #2c3e50;   /* main UI */
---color-10: #3498db;   /* accent */
+--color-60: #f5f7fa;
+--color-30: #2c3e50;
+--color-10: #3498db;
 
 ```
 --card-color: #ffffff;
@@ -12,7 +12,7 @@
 
 }
 
-/* ---------- GLOBAL RESET ---------- */
+/* ---------- RESET ---------- */
 
 * {
   margin: 0;
@@ -20,7 +20,7 @@
   box-sizing: border-box;
   }
 
-/* ---------- SMOOTH SCROLL ---------- */
+/* ---------- SCROLL ---------- */
 
 html {
 scroll-behavior: smooth;
@@ -37,18 +37,16 @@ line-height: 1.6;
 
 /* ---------- HEADINGS ---------- */
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
 font-family: 'Poppins', sans-serif;
 }
 
 h2 {
-font-weight: 600;
-letter-spacing: 1px;
-margin-bottom: 25px;
+margin-bottom: 20px;
 color: var(--color-30);
 }
 
-/* ---------- NAVIGATION BAR ---------- */
+/* ---------- NAVBAR ---------- */
 
 nav {
 position: sticky;
@@ -67,10 +65,6 @@ padding: 15px 40px;
 
 }
 
-nav h1 {
-font-size: 20px;
-}
-
 nav ul {
 list-style: none;
 display: flex;
@@ -80,15 +74,14 @@ gap: 25px;
 nav a {
 text-decoration: none;
 color: white;
-font-weight: 500;
-transition: color 0.3s;
+transition: 0.3s;
 }
 
 nav a:hover {
 color: var(--color-10);
 }
 
-/* ---------- HERO / HOME SECTION ---------- */
+/* ---------- HERO ---------- */
 
 #home {
 text-align: center;
@@ -98,35 +91,24 @@ background: linear-gradient(135deg, #f5f7fa, #e3ecf3);
 
 #home h2 {
 font-size: 40px;
-margin-bottom: 15px;
+margin-bottom: 10px;
 }
 
-#home p {
-font-size: 18px;
-}
-
-/* ---------- GENERAL SECTIONS ---------- */
+/* ---------- SECTIONS ---------- */
 
 section {
 padding: 70px 10%;
 }
 
-/* ---------- PORTFOLIO GRID ---------- */
+/* ---------- PROJECT CARDS (PDFs) ---------- */
 
-#portfolio {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 30px;
-}
-
-/* ---------- PORTFOLIO CARDS ---------- */
-
-#portfolio div {
+.project {
 background: var(--card-color);
 padding: 20px;
-border-radius: 12px;
+margin-bottom: 20px;
 
 ```
+border-radius: 12px;
 box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 
 transition: transform 0.3s ease;
@@ -134,56 +116,57 @@ transition: transform 0.3s ease;
 
 }
 
-#portfolio div:hover {
-transform: translateY(-8px);
+.project:hover {
+transform: translateY(-5px);
 }
 
-/* ---------- IMAGE ZOOM EFFECT ---------- */
-
-#portfolio img {
-width: 100%;
-border-radius: 8px;
-margin-bottom: 10px;
+.project a {
+display: inline-block;
+margin-top: 10px;
+padding: 8px 14px;
 
 ```
+background: var(--color-10);
+color: white;
+
+border-radius: 6px;
+text-decoration: none;
+```
+
+}
+
+.project a:hover {
+opacity: 0.9;
+}
+
+/* ---------- IMAGE GALLERY (FIXED GRID) ---------- */
+
+.gallery {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* forces clean layout */
+gap: 15px;
+margin-top: 20px;
+}
+
+/* ---------- IMAGES ---------- */
+
+.gallery img {
+width: 100%;
+height: 200px;
+
+```
+object-fit: cover;
+
+border-radius: 10px;
+cursor: pointer;
+
 transition: transform 0.3s ease;
 ```
 
 }
 
-#portfolio img:hover {
+.gallery img:hover {
 transform: scale(1.05);
-}
-
-/* ---------- BLOG SECTION ---------- */
-
-#blog article {
-background: var(--card-color);
-padding: 20px;
-margin-bottom: 20px;
-
-```
-border-radius: 10px;
-box-shadow: 0 4px 10px rgba(0,0,0,0.07);
-```
-
-}
-
-/* ---------- CONTACT SECTION ---------- */
-
-#contact {
-text-align: center;
-}
-
-/* ---------- BUTTON STYLE ---------- */
-
-button {
-background: var(--color-10);
-border: none;
-color: white;
-padding: 10px 18px;
-border-radius: 6px;
-cursor: pointer;
 }
 
 /* ---------- IMAGE MODAL ---------- */
@@ -221,35 +204,22 @@ color: white;
 cursor: pointer;
 }
 
-/* ---------- GALLERY ---------- */
+/* ---------- BLOG ---------- */
 
-.gallery {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-gap: 15px;
-margin-top: 20px;
-}
-
-.gallery img {
-width: 100%;
-height: 200px;
-object-fit: cover;
+#blog article {
+background: var(--card-color);
+padding: 20px;
+margin-bottom: 20px;
 
 ```
 border-radius: 10px;
-cursor: pointer;
-
-transition: transform 0.3s ease;
+box-shadow: 0 4px 10px rgba(0,0,0,0.07);
 ```
 
 }
 
-.gallery img:hover {
-transform: scale(1.05);
-}
+/* ---------- CONTACT ---------- */
 
-
-
-button:hover {
-opacity: 0.9;
+#contact {
+text-align: center;
 }
