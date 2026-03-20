@@ -3,9 +3,9 @@
 const hero = document.getElementById("home");
 
 const heroImages = [
-"images/work1.jpg",
-"images/work2.jpg",
-"images/work3.jpg"
+"images/Boho Artwork Aesthetic Today's Mantra _20260219_102030_0000.png",
+"images/Orange and Black Illustrated Design Thinking Process Explained Poster_20260219_101928_0000.png",
+"images/Screenshot 2026-03-17 210250.png"
 ];
 
 let index = 0;
