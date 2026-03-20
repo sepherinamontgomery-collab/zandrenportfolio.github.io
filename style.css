@@ -42,8 +42,10 @@ font-family: 'Poppins', sans-serif;
 }
 
 h2 {
+font-size: 28px;
 margin-bottom: 20px;
-color: var(--color-30);
+border-left: 5px solid var(--color-10);
+padding-left: 10px;
 }
 
 /* ---------- NAVBAR ---------- */
@@ -235,11 +237,5 @@ margin-top: 40px;
 }
 
 
-h2 {
-font-size: 28px;
-margin-bottom: 20px;
-border-left: 5px solid var(--color-10);
-padding-left: 10px;
-}
 
 
