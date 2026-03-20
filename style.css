@@ -223,3 +223,31 @@ box-shadow: 0 4px 10px rgba(0,0,0,0.07);
 #contact {
 text-align: center;
 }
+
+/* ---------- HERO GALLERY ---------- */
+
+.hero-gallery {
+display: flex;
+justify-content: center;
+gap: 15px;
+margin-top: 30px;
+}
+
+.hero-gallery img {
+width: 200px;
+height: 130px;
+
+```
+object-fit: cover;
+
+border-radius: 10px;
+
+transition: transform 0.3s ease;
+```
+
+}
+
+.hero-gallery img:hover {
+transform: scale(1.08);
+}
+
