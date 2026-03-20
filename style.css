@@ -84,15 +84,46 @@ color: var(--color-10);
 /* ---------- HERO ---------- */
 
 #home {
+position: relative;
+height: 100vh;
+
+```
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+display: flex;
+justify-content: center;
+align-items: center;
 text-align: center;
-padding: 100px 10%;
-background: linear-gradient(135deg, #f5f7fa, #e3ecf3);
+
+color: white;
+```
+
+}
+
+/* overlay */
+#home::before {
+content: "";
+position: absolute;
+inset: 0;
+background: rgba(0, 0, 0, 0.5);
+}
+
+/* content stays on top */
+.hero-content {
+position: relative;
+z-index: 1;
 }
 
 #home h2 {
-font-size: 40px;
-margin-bottom: 10px;
+font-size: 50px;
 }
+
+#home p {
+font-size: 18px;
+}
+
 
 /* ---------- SECTIONS ---------- */
 
@@ -224,45 +255,4 @@ box-shadow: 0 4px 10px rgba(0,0,0,0.07);
 text-align: center;
 }
 
-/* ---------- HERO GALLERY ---------- */
-
-#home {
-position: relative;
-height: 100vh;
-
-```
-background: url("images/Screenshot 2026-03-17 210250.png") center/cover no-repeat;
-
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-
-color: white;
-```
-
-}
-
-/* Dark overlay for readability */
-
-#home::before {
-content: "";
-position: absolute;
-inset: 0;
-background: rgba(0, 0, 0, 0.5);
-}
-
-/* Content stays above overlay */
-.hero-content {
-position: relative;
-z-index: 1;
-}
-
-#home h2 {
-font-size: 50px;
-}
-
-#home p {
-font-size: 18px;
-}
 
