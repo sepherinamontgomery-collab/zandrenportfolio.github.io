@@ -20,3 +20,19 @@ modal.style.display = "none";
 }
 };
 
+const hero = document.getElementById("home");
+
+const images = [
+"images/work1.jpg",
+"images/work2.jpg",
+"images/work3.jpg"
+];
+
+let index = 0;
+
+setInterval(() => {
+index = (index + 1) % images.length;
+hero.style.backgroundImage = `url(${images[index]})`;
+}, 3000);
+
+
