@@ -226,28 +226,43 @@ text-align: center;
 
 /* ---------- HERO GALLERY ---------- */
 
-.hero-gallery {
+#home {
+position: relative;
+height: 100vh;
+
+```
+background: url("images/work1.jpg") center/cover no-repeat;
+
 display: flex;
 justify-content: center;
-gap: 15px;
-margin-top: 30px;
-}
+align-items: center;
+text-align: center;
 
-.hero-gallery img {
-width: 200px;
-height: 130px;
-
-```
-object-fit: cover;
-
-border-radius: 10px;
-
-transition: transform 0.3s ease;
+color: white;
 ```
 
 }
 
-.hero-gallery img:hover {
-transform: scale(1.08);
+/* Dark overlay for readability */
+
+#home::before {
+content: "";
+position: absolute;
+inset: 0;
+background: rgba(0, 0, 0, 0.5);
+}
+
+/* Content stays above overlay */
+.hero-content {
+position: relative;
+z-index: 1;
+}
+
+#home h2 {
+font-size: 50px;
+}
+
+#home p {
+font-size: 18px;
 }
 
