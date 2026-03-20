@@ -236,6 +236,16 @@ padding: 20px;
 margin-top: 40px;
 }
 
+#home img {
+width: 300px;
+max-width: 80%;
+height: auto;
+
+margin-top: 20px;
+border-radius: 10px;
+
+}
+
 
 
 
