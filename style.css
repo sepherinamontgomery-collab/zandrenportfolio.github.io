@@ -223,3 +223,23 @@ box-shadow: 0 4px 10px rgba(0,0,0,0.07);
 #contact {
 text-align: center;
 }
+
+/* ---------- FOOTER ---------- */
+
+footer {
+background: var(--color-30);
+color: white;
+text-align: center;
+padding: 20px;
+margin-top: 40px;
+}
+
+
+h2 {
+font-size: 28px;
+margin-bottom: 20px;
+border-left: 5px solid var(--color-10);
+padding-left: 10px;
+}
+
+
